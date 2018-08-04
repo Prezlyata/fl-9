@@ -1,0 +1,223 @@
+body{
+	background: $contentBackground;	
+}
+.main-wrapper{
+	width: 960px;
+	margin: 0 auto;
+	background: $contentBackground;
+}
+a{
+	text-decoration: none;
+}
+header{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-between;
+	.logo{
+		img{
+			width: 300px;
+		}
+	}
+	nav{
+		border-bottom: 1px solid #617d8a;
+		border-top: 1px solid #617d8a;
+		font-size: 25px;
+		font-family: $textSite;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px;
+		a{
+			color: $colorTextSection;
+			margin: 14px 35px 14px 35px;
+		}
+	}
+}
+.toolbar{
+	display: flex;
+	justify-content:flex-end;
+	padding:20px 0 20px 0;
+	input{
+		color: $colorTextSection;
+		border: solid 1px;
+		height: 35px;
+		padding-left: 20px;
+		background-color: $inputColorBackground;
+	}
+	input::placeholder {
+		color: $colorTextSection;
+		font-weight: bold;
+	}
+	input:focus{
+		outline: none;
+	}
+}
+.post-list{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	article{
+		display: flex;
+		flex-direction: column;
+		width: 450px;
+		margin-bottom: 20px;
+		margin-right: 20px;
+		img{
+			width: 450px;
+			border: solid 10px $articleColor;
+		}
+		div{
+			background-color: $articleColor;
+			width: 470px;
+			.post-description{
+				margin-left: 20px;
+				width: 425px;
+				color: $colorDescription;
+				font-family: $textSite;
+				font-size: 12px;
+				padding-bottom: 10px;
+				padding-left: 5px;
+				border-bottom: solid 1px $colorDescriptionBorder;
+			}
+			h3{
+				margin-top: 5px;
+				margin-bottom: 5px;
+				margin-left: 20px;
+				width: 445px;
+				color: $articleColorH3;
+				font-family: $textSite;
+				font-weight: bold;
+				font-size: 24px;
+			}
+			p{
+				margin-top: 5px;
+				margin-left: 20px;
+				width: 445px;
+				color: $articleColorP;
+				font-family: $textSite;
+				font-size: 16px;
+			}
+		}
+	}
+}
+.about{
+	display: flex;
+	flex-direction: column;
+	h1{
+		display: flex;
+		justify-content:flex-end;
+		color: $colorTextSection;
+		font-family: $textSite;
+		font-weight: bold;
+		font-size: 28px;
+		margin-bottom: 0px;
+	}
+	p{
+		color: $colorTextSectionContent;
+		font-family: $textSite;
+		font-size: 16px;
+		margin-top: 0px;
+		margin-bottom: 25px;
+	}
+	img{
+		width: 100%;
+	}
+}
+.contact-form{
+	display: flex;
+	flex-direction: column;
+	h1{
+		display: flex;
+		justify-content:flex-end;
+		color: $colorTextSection;
+		font-family: $textSite;
+		font-weight: bold;
+		font-size: 28px;
+		margin-bottom: 0px;
+		margin-top: 50px;
+		text-transform: uppercase;
+	}
+	h4{
+		display: flex;
+		justify-content:flex-end;
+		color: $colorTextSection;
+		font-family: $textSite;
+		font-weight: bold;
+		font-size: 18px;
+		margin-top: 0px;
+		text-transform: uppercase;
+		margin-bottom: 0px;
+	}
+	form{
+		display: flex;
+		flex-direction: column;
+		padding:20px 0 20px 0;
+		input{
+			color: #617d8a;
+			border: solid 1px;
+			height: 35px;
+			padding-left: 20px;
+			margin-bottom: 15px;
+			font-family: $textSiteForm;
+			font-weight: bold;
+			background-color: $inputColorBackground;
+			border-color: $inputColorBorder;
+		}
+		input::placeholder {
+			color: #617d8a;
+		}
+		input:focus{
+			outline: none;
+		}
+		textarea{
+			width: 100%;
+			height: 100px;
+			resize: none;
+			font-family: $textSiteForm;
+			font-size: 14px;
+			color: #617d8a;
+			background-color: $inputColorBackground;
+			border-color: $inputColorBorder;
+			padding-left: 18px;
+			padding-top: 9px;
+			box-sizing: border-box;
+			font-weight: bold;
+		}
+		textarea:focus{
+			outline: none;
+		}
+	}
+	.btn-send{
+		display: flex;
+		justify-content:flex-end;
+		button{
+			background-color: $colorBtn;
+			font-family: $textSiteForm;
+			text-transform: uppercase;
+			font-size: 14px;
+			color: #fff;
+			height: 40px;
+			width: 200px;
+			text-align: center;
+			border: none;
+			cursor: pointer;
+			transition: all .3s ease-in-out;
+		}
+		button:focus{
+			outline: none;
+		}
+		button:hover{
+			background-color: $colorBtnHover;
+		}
+	}
+}
+footer{
+	display: flex;
+	justify-content:flex-start;
+	color: #617d8a;
+	font-family: $textSite;
+	font-size: 12px;
+	margin-top: 10px;
+}
