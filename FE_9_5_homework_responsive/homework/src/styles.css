@@ -1,0 +1,219 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+/*
+:root {
+ * --bg-color--dark: #0a1223;
+ * --bg-color--light: #fff;
+ * --link: #5d5d5d;
+ * --link--active: #54597d;
+ * --link--hover: #54597d;
+ * --article-title: #ddd;
+ * --article-title--dark: #000;
+ * --thumbnail--description: #5d5d5d;
+*/
+
+  /* These styles are needed only for media query max-width: 575px */
+
+  /* The 'Up' button (circle button at right bottom corner) */
+/*
+ * --btn-color: #fff;
+ * --btn-bg-color: #5ebcff;
+ *
+ * --navigation-border-bottom: #ddd;
+ * --thumbnail-title: #484747;
+}
+*/
+
+/* Your styles go here */
+
+body{
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	max-width: 991px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+nav ul{
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 20px;
+}
+nav ul li{
+	margin-left: 20px;
+}
+nav ul li a{
+	text-align: center;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	color: #5d5d5d;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+}
+nav ul li a:hover{
+	color: #54597d;
+}
+.active, nav ul li a:active {
+	color: #54597d;
+}
+header h1{
+	text-align: center;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	color:  #ddd;
+	font-size: 65px;
+	margin: 150px 0 150px 0;
+}
+.bg{
+	background-color: #0a1223;
+}
+.block{
+	display: flex;
+	flex-wrap: wrap;
+}
+.block_content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 50px;
+}
+.photo{
+	width: 49%;
+	height: 100%;
+	align-items: center;
+}
+.description{
+	width: 49%;
+}
+.block_content:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+.description h2{
+	color:  #ddd;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+	margin: 0 0;
+	background:linear-gradient(90deg, #ebebeb 5%, #434343 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.description p{
+	color: #5d5d5d;
+	text-align: justify;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	margin: 0 0;
+}
+.btn_top{
+	margin-bottom: 10px;
+	margin-right: 10px;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	padding: 17px 17px;
+	border-radius: 50%;
+	box-shadow: 9px 9px 40px -4px rgba(0,0,0,0.75);
+	transition: all 0.7s ease;
+	background: #5ebcff;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	display: none;
+}
+.btn_top:focus {
+	outline: none; 
+}
+
+@media only screen and (max-width: 991px) {
+	nav ul{
+		justify-content: center;
+	}
+	.block{
+		flex-direction: column;
+	}
+	.block_content{
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.rev,.block_content:nth-child(odd) {
+		flex-direction: column-reverse;
+	}
+	.photo{
+		width: 60%;
+	}
+	.description{
+		width: 60%;
+	}
+	nav ul li:first-child{
+		margin-left: 0px;
+	}
+}
+@media only screen and (max-width: 575px) {
+	.bg{
+		background-color: #fff;
+	}
+	header h1{
+		color: #000;
+		font-size: 50px;
+	}
+	.description h2{
+		color:  #ddd;
+		font-family: 'Open Sans';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 30px;
+		margin: 0 0;
+		background:linear-gradient(90deg, #5d5d5d 5%, #5d5d5d 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.photo{
+		width: 70%;
+	}
+	.description{
+		width: 70%;
+	}
+	nav ul{
+		flex-direction: column;
+		margin: 0 0;
+		padding: 0 0;
+	}
+	nav ul li{
+		padding: 5px 0 5px 5px;
+		border-bottom: 1px solid #ddd;
+		margin-left: 0px;
+	}
+	.active, nav ul li a:active {
+		color: #54597d;
+		font-weight: 700;
+	}
+	nav ul li a{
+		transition: all 0s ease-in-out;
+	}
+	.btn_top{
+		display: block;
+	}
+}
+
